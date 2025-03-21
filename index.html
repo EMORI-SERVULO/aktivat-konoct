@@ -19,7 +19,25 @@
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/tooplate-main.css">
     <link rel="stylesheet" href="assets/css/owl.css">
-
+    <style>
+      .col-md-12 {
+          padding: 0;
+      }
+      .imagen-lista {
+          list-style-type: none; /* Elimina los puntos de lista */
+          padding: 0; /* Elimina el padding por defecto */
+          margin: 0; /* Elimina el margen por defecto */
+          display: flex; /* Usa Flexbox para colocar los elementos en línea */
+          justify-content: space-around; /* Espacia las imágenes de manera uniforme */
+      }
+      .imagen-lista li {
+          margin: 5px; /* Espacio entre las imágenes */
+      }
+      .imagen-lista img {
+          width: 100px; /* Tamaño de las imágenes */
+          height: auto; /* Mantiene la proporción de la imagen */
+      }
+  </style>
   </head>
 <!--
 Tooplate 2113 Earth
@@ -209,31 +227,24 @@ https://www.tooplate.com/view/2113-earth
                           <div class="col-md-12">
                             <h2>CONOCENOS!</h2>
                           </div>
-                          <div class="col-md-6"></div>
+                          <div class="col-md-12">
                             <fieldset>
-                              <label for="telefono" style="color: white;">Tel. 5538877077</label>
+                              <label for="telefono" style="color: white;">Nuestro Tel. 5538877077</label>
                             </fieldset>
-                          </div>
-                          <div class="col-md-6">
                             <fieldset>
-                              <input name="name" type="text" class="form-control" id="name" placeholder="NOMBRE..." required="">
-                            </fieldset>
-                          </div>
-                          <div class="col-md-6">
-                            <fieldset>
-                              <input name="email" type="text" class="form-control" id="email" placeholder="EMAIL..." required="">
+                              <label for="telefono" style="color: white;">Nuestro email activatconocete@gmail.com</label>
                             </fieldset>
                           </div>
                           <div class="col-md-12">
-                            <fieldset>
-                              <textarea name="message" rows="6" class="form-control" id="message" placeholder="MENSAJE..." required=""></textarea>
-                            </fieldset>
-                          </div>
-                          <div class="col-md-12">
-                            <fieldset>
-                              <button type="submit" id="form-submit" class="button">ENVIAR</button>
-                            </fieldset>
+                            <ul class="imagen-lista">
+                                <li class="active"><img src="assets/images/uno.png" alt="Earth" /></li>
+                                <li><img src="assets/images/dos.png" alt="Meeting" /></li>
+                                <li><img src="assets/images/tres.png" alt="Smart" /></li>
+                                <li><img src="assets/images/cuatro.png" alt="Smart" /></li>
+                            </ul>
                         </div>
+                          
+    
                     </form>
                 </div>
             </div>
