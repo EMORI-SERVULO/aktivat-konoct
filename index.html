@@ -20,22 +20,48 @@
     <link rel="stylesheet" href="assets/css/tooplate-main.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <style>
-      .col-md-12 {
-          padding: 0;
+      /* Contenedor que usa Flexbox */
+      .form-imagenes {
+          display: flex;
+          flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea en pantallas pequeñas */
+          justify-content: space-around; /* Distribuye las imágenes con espacio entre ellas */
+          margin-top: 20px;
       }
-      .imagen-lista {
-          list-style-type: none; /* Elimina los puntos de lista */
-          padding: 0; /* Elimina el padding por defecto */
-          margin: 0; /* Elimina el margen por defecto */
-          display: flex; /* Usa Flexbox para colocar los elementos en línea */
-          justify-content: space-around; /* Espacia las imágenes de manera uniforme */
+
+      .form-imagenes div {
+          text-align: center;
+          margin: 5px;
       }
-      .imagen-lista li {
-          margin: 5px; /* Espacio entre las imágenes */
+
+      .form-imagenes img {
+          width: 100%; /* Hacemos que las imágenes sean flexibles */
+          max-width: 120px; /* Tamaño máximo de las imágenes */
+          height: auto; /* Mantiene la proporción */
+          border: 2px solid #ddd; /* Borde alrededor de las imágenes */
+          border-radius: 8px; /* Bordes redondeados */
+          padding: 5px; /* Espacio dentro de las imágenes */
       }
-      .imagen-lista img {
-          width: 100px; /* Tamaño de las imágenes */
-          height: auto; /* Mantiene la proporción de la imagen */
+
+      /* Media Query para pantallas pequeñas (móviles) */
+      @media (max-width: 768px) {
+          .form-imagenes {
+              justify-content: center; /* Centra las imágenes cuando hay poco espacio */
+          }
+
+          .form-imagenes div {
+              width: 45%; /* Hace que las imágenes ocupen el 45% del ancho en pantallas pequeñas */
+          }
+
+          .form-imagenes img {
+              max-width: 100%; /* Las imágenes se expanden al 100% del contenedor */
+          }
+      }
+
+      /* Media Query para pantallas muy pequeñas (móviles más pequeños) */
+      @media (max-width: 480px) {
+          .form-imagenes div {
+              width: 80%; /* Las imágenes ocuparán el 80% del ancho en pantallas muy pequeñas */
+          }
       }
   </style>
   </head>
@@ -222,7 +248,7 @@ https://www.tooplate.com/view/2113-earth
         <div class="slide" id="4">
             <div class="content fourth-content">
                 <div class="container-fluid">
-                    <form id="contact" action="" method="post">
+                    <form id="contact" action="" >
                         <div class="row">
                           <div class="col-md-12">
                             <h2>CONOCENOS!</h2>
@@ -234,16 +260,18 @@ https://www.tooplate.com/view/2113-earth
                             <fieldset>
                               <label for="telefono" style="color: white;">Nuestro email activatconocete@gmail.com</label>
                             </fieldset>
+                            
                           </div>
-                          <div class="col-md-12">
-                            <ul class="imagen-lista">
-                                <li class="active"><img src="assets/images/uno.png" alt="Earth" /></li>
-                                <li><img src="assets/images/dos.png" alt="Meeting" /></li>
-                                <li><img src="assets/images/tres.png" alt="Smart" /></li>
-                                <li><img src="assets/images/cuatro.png" alt="Smart" /></li>
-                            </ul>
-                        </div>
                           
+                          <div class="col-md-12">
+                            <div class="form-imagenes">
+                              <div><img src="assets/images/uno.png" alt="Earth"></div>
+                              <div><img src="assets/images/dos.png" alt="Meeting"></div>
+                              <div><img src="assets/images/tres.png" alt="Smart"></div>
+                              <div><img src="assets/images/cuatro.png" alt="Technology"></div>
+                          </div>
+                          </div>
+                        </div>
     
                     </form>
                 </div>
